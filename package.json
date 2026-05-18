@@ -1,0 +1,25 @@
+{
+  "name": "scuola-facile-jd",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "db": "json-server db.json"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.2.4",
+    "daisyui": "^5.5.19",
+    "json-server": "^1.0.0-beta.15",
+    "tailwindcss": "^4.2.4",
+    "vite": "^8.0.10"
+  },
+  "dependencies": {
+    "@just-dom/lucide": "^1.1.0",
+    "@just-dom/router": "^1.0.0",
+    "@just-dom/signals": "^1.0.0",
+    "just-dom": "^2.1.0"
+  }
+}
