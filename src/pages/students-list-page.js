@@ -10,7 +10,7 @@ export function StudentsListPage() {
     // const studentsList = []
     const [studentsList, setStudentsList] = createSignal([])
 
-    fetch(`${import.meta.env.VITE_API_URL}/studenti`)
+    fetch(`${"http://localhost:5000/studenti"}/studenti`)
         .then(async res => {
             const students = await res.json();
             console.log(students);
@@ -80,7 +80,7 @@ export function StudentsListPage() {
                     ),
                     onDelete: async () => {
                         // import.meta.env.VITE_API_URL
-                        return fetch(`${"http://localhost:3000/studenti"}/studenti/${student.id}`, { method: 'DELETE' })
+                        return fetch(`${"http://localhost:5000/studenti"}/studenti/${student.id}`, { method: 'DELETE' })
                             .then(() => {
                                 setTimeout(() => {
                                     setStudentsList(studentsList().filter(st => st.id !== student.id))

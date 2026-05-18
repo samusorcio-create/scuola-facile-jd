@@ -7,7 +7,7 @@ export function StudentPage({ params }) {
     const [loading, setLoading] = createSignal(true)
     const [student, setStudent] = createSignal()
 
-    fetch(`${"http://localhost:3000/studenti"}/studenti/${params.id}`)
+    fetch(`${"http://localhost:5000/studenti"}/studenti/${params.id}`)
         .then(async res => {
             if (!res.ok) {
                 throw new Error("");
@@ -70,7 +70,7 @@ function StudentCard({ student , setStudent }) {
                 data.img = `https://api.dicebear.com/9.x/initials/svg?seed=${data.nome}-${data.cognome}`;
                 console.log(data);
 
-                await fetch(`${"http://localhost:3000/studenti"}/studenti/${student.id}`, {
+                await fetch(`${"http://localhost:5000/studenti"}/studenti/${student.id}`, {
                     method: 'PATCH',
                     body: JSON.stringify(data),
                     headers: {'Content-Type': 'application/json'},
