@@ -79,7 +79,8 @@ export function StudentsListPage() {
                         [jd.lucide('Trash2', { className: 'size-4' })]
                     ),
                     onDelete: async () => {
-                        return fetch(`${import.meta.env.VITE_API_URL}/studenti/${student.id}`, { method: 'DELETE' })
+                        // import.meta.env.VITE_API_URL
+                        return fetch(`${"http://localhost:3000/studenti"}/studenti/${student.id}`, { method: 'DELETE' })
                             .then(() => {
                                 setTimeout(() => {
                                     setStudentsList(studentsList().filter(st => st.id !== student.id))
