@@ -20,21 +20,21 @@ export function studentCreatePage()  {
                         const data = await res.json();
                         navigate(`/studenti/${data.id}`,{replace:true});
                     }) 
-                }})
-                // jd.button({
-                //     className: 'btn btn-primary',
-                //     ref: (el) => {
-                //         effect(el, () => {
-                //             el.replaceChildren(
-                //                 jd.lucide(
-                //                     loading() ? 'Loader2' : 'Save',
-                //                     { className: loading() ? 'size-4 animate-spin' : 'size-4' }
-                //                 ),
-                //                 'Salva'
-                //             )
-                //         })
-                //     }
-                // }, ['Salva'])
+                }}),
+                jd.button({
+                     className: 'btn btn-primary',
+                     ref: (el) => {
+                         effect(el, () => {
+                             el.replaceChildren(
+                                 jd.lucide(
+                                     loading() ? 'Loader2' : 'Save',
+                                     { className: loading() ? 'size-4 animate-spin' : 'size-4' }
+                                 ),
+                                 'Salva'
+                             )
+                         })
+                     }
+                 }, ['Salva'])
             ])
         ])
     ])
