@@ -1,5 +1,5 @@
 import {navigate} from "@just-dom//router";
-import {StudentForm} from "../component/student-form";
+import {StudentForm} from "../components/student-form";
 import {jd} from "../jd.config";
 
 export function studentCreatePage()  {
